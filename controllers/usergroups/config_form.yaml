@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: bnb.usergroup::lang.group.label
+form: ~/plugins/bnb/usergroup/models/usergroup/fields.yaml
+modelClass: BnB\UserGroup\Models\UserGroup
+defaultRedirect: bnb/usergroup/usergroups
+
+create:
+    redirect: bnb/usergroup/usergroups/update/:id
+    redirectClose: bnb/usergroup/usergroups
+
+update:
+    redirect: bnb/usergroup/usergroups
+    redirectClose: bnb/usergroup/usergroups

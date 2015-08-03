@@ -1,0 +1,14 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: bnb.usergroup::lang.group.name
+        span: left
+
+    code:
+        label: bnb.usergroup::lang.group.code
+        comment: bnb.usergroup::lang.group.code_comment
+        span: right

@@ -1,0 +1,5 @@
+1.0.2:
+  - Create tables
+  - create_user_groups_table.php
+  - create_users_groups_table.php
+1.0.1: First version of UserGroup
