@@ -7,3 +7,7 @@ This plugin adds front-end user group management features to [OctoberCMS](http:/
 ## Requirements
 
 [RainLab User plugin](https://github.com/rainlab/user-plugin) must be installed.
+
+## Disclaimer
+
+This is a __work in progess__ plugin.
