@@ -1,8 +1,5 @@
 <?php Block::put('breadcrumb') ?>
-    <ul>
-        <li><a href="<?= Backend::url('bnb/usergroup/usergroups') ?>"><?= e(trans('bnb.usergroup::lang.groups.menu_label')) ?></a></li>
-        <li><?= e(trans($this->pageTitle)) ?></li>
-    </ul>
+<?= $this->makePartial('breadcrumb') ?>
 <?php Block::endPut() ?>
 
 <?php if (!$this->fatalError): ?>

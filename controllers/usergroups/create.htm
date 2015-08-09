@@ -1,8 +1,5 @@
 <?php Block::put('breadcrumb') ?>
-    <ul>
-        <li><a href="<?= Backend::url('bnb/usergroup/usergroups') ?>"><?= e(trans('bnb.usergroup::lang.groups.menu_label')) ?></a></li>
-        <li><?= e(trans($this->pageTitle)) ?></li>
-    </ul>
+<?= $this->makePartial('breadcrumb') ?>
 <?php Block::endPut() ?>
 
 <?php if (!$this->fatalError): ?>
@@ -35,9 +32,9 @@
                         class="btn btn-default">
                     <?= e(trans('backend::lang.form.create_and_close')) ?>
                 </button>
-                        <span class="btn-text">
-                            <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('bnb/usergroup/usergroups') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
-                        </span>
+                <span class="btn-text">
+                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('bnb/usergroup/usergroups') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
+                </span>
             </div>
         </div>
 
