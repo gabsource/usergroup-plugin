@@ -2,6 +2,7 @@
 
 use Backend\Facades\Backend;
 use Illuminate\Support\Facades\Event;
+use RainLab\User\Components\Session;
 use RainLab\User\Models\User;
 use System\Classes\PluginBase;
 
@@ -10,6 +11,11 @@ use System\Classes\PluginBase;
  */
 class Plugin extends PluginBase
 {
+
+    public $require = [
+        'RainLab.User'
+    ];
+
 
     /**
      * Returns information about this plugin.
@@ -22,7 +28,7 @@ class Plugin extends PluginBase
             'name'        => 'bnb.usergroup::lang.plugin.name',
             'description' => 'bnb.usergroup::lang.plugin.description',
             'author'      => 'B&B Web Expertise',
-            'icon'        => 'icon-leaf'
+            'icon'        => 'icon-users'
         ];
     }
 
@@ -38,10 +44,24 @@ class Plugin extends PluginBase
     }
 
 
+    public function registerComponents()
+    {
+        return [
+            'BnB\UserGroup\Components\SessionGroup' => 'SessionGroup'
+        ];
+    }
+
+
     public function boot()
     {
 
+        Session::extend(function ($component) {
+            /* @var $component Session */
+
+        });
+
         User::extend(function ($model) {
+            /* @var $model User */
             $model->belongsToMany['groups'] = ['BnB\UserGroup\Models\UserGroup', 'table' => 'users_groups'];
         });
 
