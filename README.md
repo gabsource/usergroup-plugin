@@ -15,6 +15,11 @@ The session group component should be added to a layout that has registered user
 Only connected users that belongs to the selected group will have access to the page. Other users or guests wille be
 redirected to the selected page in the component settings.
 
+## Adding users to groups
+
+Users can be attached to groups using the *front-end user* edit form. In the *Groups* tab of the form, select the groups
+the user belongs to.
+
 ## Disclaimer
 
 This is a __work in progess__ plugin.
